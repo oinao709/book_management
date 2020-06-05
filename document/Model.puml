@@ -1,0 +1,27 @@
+@startuml
+
+class BookInfomation
+class BookCode
+class BookTitle
+class BookVolume
+class BookAuthor
+
+class BookNumber
+
+class BookEntity
+
+class BookRepository {
+    + BookNumber issue()
+    + void register(BookEntity)
+}
+
+BookEntity --> BookNumber
+BookEntity --> BookInfomation
+BookInfomation --> BookCode
+BookInfomation --> BookTitle
+BookInfomation --> BookVolume
+BookInfomation --> BookAuthor
+BookRepository --> BookNumber
+BookRepository --> BookEntity
+
+@enduml
